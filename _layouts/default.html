@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{ page.title }} - Dev - Rolando Islas</title>
+	<link rel="stylesheet" href="//rolandoislas.com/inc/css/style.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="main-container">
+
+	{% include header.html %}
+	
+	<div id="feature-container">
+		{{ content }}
+	</div>
+	
+	<div id="filter-container">
+		<div id="filter-links">
+		<ul id="filter-links-list">
+			<li></li>
+		</ul>
+		</div>
+		<div id="search-container">
+			<form id="search-form" action="">
+				<input type="text" id="search-field" class="search-field" name="q">
+				<div id="search-submit"></div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="video-list-container">
+		<div id="list-chunk-container"></div>
+		<div style="clear:both;"></div>
+	</div>
+	
+	{% include footer.html %}
+	
+</div>
+<script src="/inc/js/chunk.js"></script>
+</body>
+</html>
