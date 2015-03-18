@@ -44,7 +44,7 @@ function addEvents() {
 		doSearch();
 		return false;
 	});
-	$("#search-field").change(function(){
+	$("#search-field").on("input", function(){
 		doSearch();
 	});
 	$("#search-submit").click(function(){
