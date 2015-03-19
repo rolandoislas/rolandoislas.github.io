@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{ page.title }} - Dev - Rolando Islas</title>
+	<link rel="stylesheet" href="//rolandoislas.com/inc/css/style.css">
+	<link rel="stylesheet" href="/inc/css/item.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="main-container">
+
+	{% include header.html %}
+	
+	<div id="video-list-container">
+		<div id="md-content">
+			{% if page.addTitle %}
+				<h1 style="text-align:center;">GameVoice</h1>
+			{% endif %}
+			{% for post in site.posts %}
+				{% if post.title == {{page.title}} %}
+					{{post.content}}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	
+	{% include footer.html %}
+	
+</div>
+<script src="/inc/js/item.js"></script>
+</body>
+</html>

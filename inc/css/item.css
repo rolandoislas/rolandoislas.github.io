@@ -1,0 +1,48 @@
+/* Overrides */
+#main-container {
+	width: 640px;
+	min-width: 640px;
+	background: transparent;
+	color: #eaeaea;
+}
+#header-links {
+	margin: 0 0 0 443px;
+}
+#video-list-container {
+	border: 1px dashed #eaeaea;
+}
+/* Item page specific */
+pre {
+	background: #111;
+	color: #fff;
+	padding: 10px;
+	margin: 5px 0;
+}
+p {
+	margin:20px 0;
+}
+#md-content {
+	width: 600px;
+	margin: 0 auto;
+	font: 20px Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
+	line-height: 1.5;
+}
+#md-content li {
+	list-style: none;
+}
+#md-content li:before {
+	content: ">>";
+	margin-right: 20px;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 20px 0;
+	color: #aef7a0;
+}
+
+/* Links */
+
+a {
+	color: #aef7a0;
+}
