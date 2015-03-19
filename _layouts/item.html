@@ -3,7 +3,7 @@
 <head>
 	<title>{{ page.title }} - Dev - Rolando Islas</title>
 	<link rel="stylesheet" href="//rolandoislas.com/inc/css/style.css">
-	<link rel="stylesheet" href="/inc/css/item.css">
+	<link rel="stylesheet" href="{% if page.submodule %}/{{page.submodule}}{% endif %}/inc/css/item.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
@@ -27,6 +27,6 @@
 	{% include footer.html %}
 	
 </div>
-<script src="/inc/js/item.js"></script>
+<script src="{% if page.submodule %}/{{page.submodule}}{% endif %}/inc/js/item.js"></script>
 </body>
 </html>
