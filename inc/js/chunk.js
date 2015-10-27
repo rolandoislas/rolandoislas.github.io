@@ -1,6 +1,7 @@
 !function(){
 	
 var repos = "";
+var imgRoot = "//data.rolandoislas.com/dev/img/thumb/";
 	
 function addRepos(isSearch, query) {
 	isSearch = typeof isSearch !== 'undefined' ? isSearch : false;
@@ -14,7 +15,7 @@ function addRepos(isSearch, query) {
 				link = repo["homepage"]
 			var reg = new RegExp(query, 'gi');
 			if((isSearch && name.match(reg) != null) || !isSearch)
-				$("#list-chunk-container").append('<div class="video-chunk"><a href="' + link + '"><div class="video-chunk-thumbnail" title="' + name +'" style="background:#ccc url(/inc/img/thumb/' + name.toLowerCase() + '.jpg);background-size:cover;"></div></a></div>');
+				$("#list-chunk-container").append('<div class="video-chunk"><a href="' + link + '"><div class="video-chunk-thumbnail" title="' + name +'" style="background:#ccc url(' + imgRoot + name.toLowerCase() + '.jpg);background-size:cover;"></div></a></div>');
 		}
 	}
 }
