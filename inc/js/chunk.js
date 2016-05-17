@@ -1,7 +1,6 @@
 !function(){
 	
-var repos = "";
-var imgRoot = "//data.rolandoislas.com/dev/img/thumb/";
+var repos;
 	
 function addRepos(isSearch, query) {
 	isSearch = typeof isSearch !== 'undefined' ? isSearch : false;
@@ -11,11 +10,30 @@ function addRepos(isSearch, query) {
 			var repo = repos[key];
 			var name = repo["name"];
 			var link = repo["html_url"];
+			var description = repo["description"];
 			if(repo["homepage"])
 				link = repo["homepage"]
 			var reg = new RegExp(query, 'gi');
-			if((isSearch && name.match(reg) != null) || !isSearch)
-				$("#list-chunk-container").append('<div class="video-chunk"><a href="' + link + '"><div class="video-chunk-thumbnail" title="' + name +'" style="background:#ccc url(' + imgRoot + name.toLowerCase() + '.jpg);background-size:cover;"></div></a></div>');
+			if((isSearch && name.match(reg) != null) || !isSearch) {
+				var chunkElement = $("<div>", {
+					"class": "video-chunk"
+				})
+				.html("test")
+				.html(
+					$("<a>")
+					.attr("href", link)
+					.html(
+						$("<div>", {
+							"class": "video-chunk-thumbnail"
+						})
+						.attr("title", description)
+						.css("background", "#000")
+						.html(name)
+					)
+				);
+				$("#list-chunk-container").append(chunkElement);
+				$("#list-chunk-container div").last().fitText();
+			}
 		}
 	}
 }
