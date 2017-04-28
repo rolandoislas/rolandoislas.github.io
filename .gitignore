@@ -1,3 +1,4 @@
 #jekyll
 _site/
 *.lock
+.idea/

@@ -1,7 +1,13 @@
 <!doctype html>
 <html>
 <head>
-	<title>{{ page.title }} - Dev - Rolando Islas</title>
+	<title>
+		{% if page.title == "Home" %}
+			Dev - Rolando Islas
+		{% else %}
+			{{ page.title }} - Dev - Rolando Islas
+		{% endif %}
+	</title>
 	<link rel="stylesheet" href="/inc/css/style.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="/inc/js/global.js"></script>
